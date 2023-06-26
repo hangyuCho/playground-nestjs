@@ -81,7 +81,43 @@ nest g module boards
 
 ### Board の Controller 生成
 
+```shell
+# nest: nestcliを使います
+# g : generate(生成)
+# controller : controllerを生成
+# boards : controllerの名称
+# --no-spec : テストコードを生成しない
+nest g controller boards --no-spec
+```
+
 ### Nestjs Providers, Service とは
+
+DB のデータ取得やビジネスロジックを担当
+
+```shell
+nest g service boards --no-spec
+```
+
+@Injectable：他のコンポーネントからこのサービスを使えるようにしてくれるデコレーター
+(DI の概念)
+
+providers は module にこのサービスを使いますという事を宣言する時サービスの配列を設定する必要がある。
+
+contoller から service を呼び出すためには、constructor の変数でサービスオブジェクトをもらえるが、その方法は以下のようになる。
+
+```javascript
+boardsService: BoardsService;
+
+constructor(boardsServices: BoardsService) {
+  this.boardsService = boardsService;
+}
+```
+
+↓ に省略もできる
+
+```typescript
+constructor(private boardsServices: BoardsService) { }
+```
 
 ---
 
