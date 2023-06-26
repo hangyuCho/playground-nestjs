@@ -73,6 +73,12 @@ nest g module boards
 
 ### NestJs の Controller とは？
 
+> ブラウザから request がきたら
+> http メソッドにより request を分配し処理を返す処理を行う
+
+- @(デコレーター)
+- handler(ハンドラー) - メソッド
+
 ### Board の Controller 生成
 
 ### Nestjs Providers, Service とは
