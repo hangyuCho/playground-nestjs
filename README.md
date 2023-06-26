@@ -15,7 +15,11 @@ pnpm setup
 source ~/.zshrc
 ```
 
-### nest cli のインストール
+## Description
+
+### NestJs とは
+
+### NestJs/cli インストール
 
 ```shell
 pnpm i -g @nestjs/cli
@@ -38,14 +42,44 @@ nest new .
 
 > ![](./init2.png)
 
-```shell
+### NestJs の基本構成
 
+> - eslintrc.js
+> - prettierrc
+> - nest-cli.json
+>   1.  nest プロジェクトを為細かい設定を定義する json ファイル
+> - tsconfig.json
+>   1.  typescript のコンパイルの設定を定義
+> - tsconfig.build.json
+>   1.  tsconfig.json の１種類であり、build 時必要な設定を定義
+>   2.  "excludes"にはビルド時除外するファイルを指定することができる。
+> - package.json
+
+### NestJs のロジックの流れ
+
+module -> xxx-module -> xxx-controller -> xxx-service
+
+### NestJs モジュール
+
+フロンドから request がある時一番早めに辿り着く場所
+
+### Board の Module 生成
+
+nest はコマンドでファイルを自動生成する機能がついている
+
+```shell
+nest g module boards
 ```
 
-## Description
+### NestJs の Controller とは？
 
-check in my
-[Wiki by this project](https://github.com/hangyuCho)
+### Board の Controller 生成
+
+### Nestjs Providers, Service とは
+
+---
+
+---
 
 ## Installation
 
