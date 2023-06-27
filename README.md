@@ -101,7 +101,20 @@ nest g service boards --no-spec
 @Injectable：他のコンポーネントからこのサービスを使えるようにしてくれるデコレーター
 (DI の概念)
 
-providers は module にこのサービスを使いますという事を宣言する時サービスの配列を設定する必要がある。
+providers とは
+
+- nestjs の基本クラス
+  - service
+  - repository
+  - factory
+  - helper
+- オブジェクトを自動的に割当可能(DI)
+- nestjs runtime に委任できるようです。
+
+- service とは サービスはソフトウエアの開発の中でよく使われる概念である。
+- @Injectable デコレーターに囲まれモジュールに提供され、このサービスインスタンスはアプリケーションの全体で使われる。
+
+サービスはコントローラーからデータの検証を行ったり、DB へアイテムを生成するなどの作業を行う部分らしいです。w
 
 contoller から service を呼び出すためには、constructor の変数でサービスオブジェクトをもらえるが、その方法は以下のようになる。
 
